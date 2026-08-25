@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="pics/favicon.png" />
+
+  <meta name="description"
+    content="Portfolio desain grafis minimalis & estetis oleh Gayuh: poster, konten sosial media, branding UMKM." />
+  <meta name="author" content="Gayuh" />
+
+  <!-- Open Graph / Social Share -->
+  <meta property="og:title" content="Gayuh – Portfolio" />
+  <meta property="og:description" content="Desain poster, konten sosial media, branding elegan & minimalis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="pics/wuwa.png" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Go to top">Gayuh</a>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="toggle-dark" aria-pressed="false" aria-label="Toggle dark mode">🌗</button>
+        <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="primary-nav"
+          aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero" data-aos="fade-up">
+      <!-- Video Background -->
+      <div class="video-background">
+        <video autoplay muted loop playsinline preload="metadata" poster="pics/wuwa.png">
+          <source src="video/hero-video.mp4" type="video/mp4">
+          Browser Anda tidak mendukung video.
+        </video>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-text">
+        <h1 class="hero-heading">Hi, I'm <span class="accent">Gayuh</span></h1>
+        <p class="hero-typed">
+          <span id="typed-strings">
+            <span>Graphic Designer.</span>
+            <span>Poster & Social Media Specialist.</span>
+            <span>Creating visuals.</span>
+            <span>Minimalist & Aesthetic Visuals.</span>
+          </span>
+          <span id="typed-output" aria-live="polite"></span>
+        </p>
+        <p class="hero-sub">Saya fokus membuat desain yang simple, elegan, dan efektif untuk promosi.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">Lihat Karya</a>
+          <a href="#contact" class="btn btn-ghost">Kontak</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" data-aos="fade-right">
+      <div class="container narrow">
+        <h2 class="section-title">About Me</h2>
+        <p>Saya seorang graphic designer yang fokus pada
+          digital artwork, photo manipulation, poster design, photo
+          editing, dan visual composition.</p>
+        <div class="skills">
+          <span>Photoshop</span>
+          <span>Canva</span>
+          <span>Poster Design</span>
+          <span>Sosial Media</span>
+          <span>Graphic Design</span>
+          <span>Typography</span>
+        </div>
+        <a href="CV/CV_Gayuh_Raiguna.pdf" class="btn btn-primary" download>Download CV</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects" data-aos="zoom-in">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Beberapa karya desain yang pernah saya buat. Filter berdasarkan kategori di bawah.</p>
+
+        <div class="filter-group" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="poster">Poster Design</button>
+          <button class="filter-btn" data-filter="sosmed">Social Media</button>
+          <button class="filter-btn" data-filter="branding">Graphic Design</button>
+          <button class="filter-btn" data-filter="thumbnail">Thumbnail YouTube</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <article class="card" data-category="poster">
+            <img src="pics/poster musik.jpg" alt="Poster promosi musik" loading="lazy" />
+          </article>
+          <article class="card" data-category="sosmed">
+            <img src="pics/Artboard 2.png" alt="Konten sosial media joki game" loading="lazy" />
+          </article>
+          <article class="card" data-category="branding">
+            <img src="pics/WutheringWavesChangli_p1.jpg" alt="Ilustrasi karakter Wuthering Waves - Changli"
+              loading="lazy" />
+          </article>
+          <article class="card" data-category="poster">
+            <img src="pics/FINAL.jpg" alt="Poster promosi otomotif" loading="lazy" />
+          </article>
+          <article class="card" data-category="thumbnail">
+            <img src="pics/Final002.jpg" alt="Thumbnail YouTube bertema otomotif" loading="lazy" />
+          </article>
+          <article class="card" data-category="thumbnail">
+            <img src="pics/Final003.jpg" alt="Thumbnail YouTube bertema otomotif" loading="lazy" />
+          </article>
+          <article class="card" data-category="sosmed">
+            <img src="pics/2.jpg" alt="Konten sosial media joki game" loading="lazy" />
+          </article>
+          <article class="card" data-category="branding">
+            <img src="pics/Ive.jpg" alt="Ilustrasi karakter Ive" loading="lazy" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" data-aos="fade-up">
+      <div class="container narrow">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Butuh desain untuk promosi? Kirim pesan di bawah atau hubungi lewat sosial media.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required placeholder="Nama Anda" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="email@domain.com" />
+          </div>
+          <div class="form-field">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-direct">
+          <p>Email langsung: <a href="mailto:gayuhraiiguna@gmail.com">gayuhraiiguna@gmail.com</a></p>
+          <p>WhatsApp: <a href="https://wa.me/6281296674543" target="_blank" rel="noopener">+62 812-9667-4543</a></p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/raiga.06" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/gayuhraiguna" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.behance.net/gayuhraiguna" target="_blank" rel="noopener">Behance</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Gayuh. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cursor Trail Canvas -->
+  <canvas id="cursor-line" aria-hidden="true"></canvas>
+
+  <!-- Vendor: AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init('qzdec9wk4z3jKlyPH'); // Public Key
+    })();
+  </script>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+
+</html>
