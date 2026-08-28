@@ -7,39 +7,60 @@
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.15);
   --transition-fast: 0.15s;
-  --transition: 0.3s;
+  --transition: 0.4s ease;
 
-  --bg: #f9f9f9;
+  --bg: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-hero: #0f172a;
+  --bg-about: #ffffff;
+  --bg-projects: #f3f0ff;
+  --bg-contact: #edf2ff;
+  --bg-footer: #0f172a;
+  --text-footer: #cbd5e1;
+
   --bg-card: #ffffff;
-  --bg-header: #ffffff;
-  --text: #333333;
-  --text-light: #666666;
-  --border: rgba(0, 0, 0, 0.1);
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: rgba(108, 99, 255, 0.12);
 }
 
 /* Dark Scheme (auto) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #181818;
-    --bg-card: #242424;
-    --bg-header: #242424;
-    --text: #f0f0f0;
-    --text-light: #bbbbbb;
+    --bg: #0f172a;
+    --bg-header: rgba(15, 23, 42, 0.95);
+    --bg-hero: #080c14;
+    --bg-about: #131722;
+    --bg-projects: #1b182b;
+    --bg-contact: #141c2b;
+    --bg-footer: #0a0d15;
+    --text-footer: #94a3b8;
+
+    --bg-card: #232038;
+    --text: #f8fafc;
+    --text-light: #cbd5e1;
     --border: rgba(255, 255, 255, 0.1);
   }
 }
 
 /* Dark Mode Manual Override */
 body.dark {
-  --bg: #181818;
-  --bg-card: #242424;
-  --bg-header: #242424;
-  --text: #f0f0f0;
-  --text-light: #bbbbbb;
+  --bg: #0f172a;
+  --bg-header: rgba(15, 23, 42, 0.95);
+  --bg-hero: #080c14;
+  --bg-about: #131722;
+  --bg-projects: #1b182b;
+  --bg-contact: #141c2b;
+  --bg-footer: #0a0d15;
+  --text-footer: #94a3b8;
+
+  --bg-card: #232038;
+  --text: #f8fafc;
+  --text-light: #cbd5e1;
   --border: rgba(255, 255, 255, 0.1);
 }
 
@@ -48,12 +69,19 @@ body.dark {
    set to dark (the prefers-color-scheme media query above would otherwise
    still apply, since it targets :root with the same specificity). */
 body.light {
-  --bg: #f9f9f9;
+  --bg: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-hero: #0f172a;
+  --bg-about: #ffffff;
+  --bg-projects: #f3f0ff;
+  --bg-contact: #edf2ff;
+  --bg-footer: #0f172a;
+  --text-footer: #cbd5e1;
+
   --bg-card: #ffffff;
-  --bg-header: #ffffff;
-  --text: #333333;
-  --text-light: #666666;
-  --border: rgba(0, 0, 0, 0.1);
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: rgba(108, 99, 255, 0.12);
 }
 
 /* =========================================================
@@ -275,6 +303,9 @@ a:hover {
   gap: 2rem;
   padding: clamp(5rem, 9vw, 9rem) 5%;
   text-align: center;
+  background: var(--bg-hero);
+  color: #ffffff;
+  transition: background var(--transition);
 }
 
 .hero-text {
@@ -287,24 +318,25 @@ a:hover {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
   font-weight: 700;
   margin-bottom: 0.5em;
+  color: #ffffff;
 }
 
 .accent {
-  color: var(--primary);
+  color: #818cf8;
 }
 
 .hero-typed {
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   min-height: 1.5em;
   margin-bottom: 0.75em;
-  color: var(--text-light);
+  color: #e2e8f0;
 }
 
 .hero-sub {
   margin-bottom: 1.75em;
   max-width: 50ch;
   margin-inline: auto;
-  color: var(--text-light);
+  color: #cbd5e1;
 }
 
 .hero-btns {
@@ -352,6 +384,7 @@ a:hover {
   padding: clamp(4rem, 7vw, 6rem) 5%;
   text-align: center;
   scroll-margin-top: 80px;
+  transition: background var(--transition), color var(--transition);
 }
 
 .section-title {
@@ -367,7 +400,12 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-/* About */
+/* About Section */
+.about {
+  background: var(--bg-about);
+  border-bottom: 1px solid var(--border);
+}
+
 .about p {
   font-size: 1.125rem;
   color: var(--text-light);
@@ -388,10 +426,22 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: 999px;
   font-size: 0.875rem;
-  color: var(--text-light);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), background var(--transition);
 }
 
-/* Projects */
+.skills span:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+/* Projects Section */
+.projects {
+  background: var(--bg-projects);
+  border-bottom: 1px solid var(--border);
+}
+
 .filter-group {
   display: flex;
   justify-content: center;
@@ -404,11 +454,12 @@ a:hover {
   padding: 8px 18px;
   border-radius: 999px;
   border: 1px solid var(--primary);
-  background: transparent;
+  background: var(--bg-card);
   color: var(--primary);
   cursor: pointer;
   font-size: 0.9rem;
   transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-btn:hover {
@@ -434,8 +485,9 @@ a:hover {
   background: var(--bg-card);
   padding: 1.25rem;
   border-radius: var(--radius-md);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition);
 }
 
 .card:hover {
@@ -454,7 +506,11 @@ a:hover {
   font-size: 0.95rem;
 }
 
-/* Contact */
+/* Contact Section */
+.contact {
+  background: var(--bg-contact);
+}
+
 .contact-form {
   display: grid;
   gap: 1.25rem;
@@ -479,6 +535,8 @@ a:hover {
   border: 1px solid var(--border);
   background: var(--bg-card);
   color: var(--text);
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition), border-color var(--transition);
 }
 
 .form-field input:focus,
@@ -519,14 +577,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
+/* Footer Section */
 .site-footer {
-  margin-top: 4rem;
-  padding-block: 2rem;
-  background: var(--bg-header);
+  margin-top: 0;
+  padding-block: 2.5rem;
+  background: var(--bg-footer);
   text-align: center;
-  color: var(--text-light);
+  color: var(--text-footer);
   font-size: 0.9rem;
+  transition: background var(--transition), color var(--transition);
 }
 
 /* =========================================================
