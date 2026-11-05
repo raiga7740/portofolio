@@ -5,27 +5,30 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
+  <title>Building Digital Experiences Through Code & Creativity — Gayuh Portfolio</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="pics/favicon.png" />
 
   <meta name="description"
-    content="Portfolio desain grafis minimalis & estetis oleh Gayuh: poster, konten sosial media, branding UMKM." />
+    content="Portfolio resmi Gayuh — Web Developer & Visual Designer: Building Digital Experiences Through Code & Creativity." />
   <meta name="author" content="Gayuh" />
 
   <!-- Open Graph / Social Share -->
-  <meta property="og:title" content="Gayuh – Portfolio" />
-  <meta property="og:description" content="Desain poster, konten sosial media, branding elegan & minimalis." />
+  <meta property="og:title" content="Building Digital Experiences Through Code & Creativity" />
+  <meta property="og:description"
+    content="Portfolio web development, UI design, dan karya digital presisi oleh Gayuh." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="pics/wuwa.png" />
   <meta property="og:url" content="https://example.com" />
   <meta property="og:locale" content="id_ID" />
 
-  <!-- Fonts -->
+  <!-- Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
 
   <!-- AOS Animation CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -37,162 +40,1127 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Top Sticky Header Navigation -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="Go to top">Gayuh</a>
+      <a href="#" class="logo" aria-label="Gayuh Portfolio">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">Gayuh<span class="dot">.</span></span>
+      </a>
 
       <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
         <ul>
           <li><a href="#about" data-nav>About</a></li>
           <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#skills" data-nav>Skills &amp; Tools</a></li>
+          <li><a href="#journey" data-nav>Journey</a></li>
           <li><a href="#contact" data-nav>Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button id="theme-toggle" class="toggle-dark" aria-pressed="false" aria-label="Toggle dark mode">🌗</button>
+        <button id="theme-toggle" class="toggle-dark" aria-pressed="false" aria-label="Toggle dark mode"
+          title="Ganti Tema">
+          <svg class="theme-icon light-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon dark-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
         <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="primary-nav"
-          aria-label="Toggle navigation">☰</button>
+          aria-label="Toggle navigation">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- Hero -->
-    <section class="hero" data-aos="fade-up">
-      <!-- Video Background -->
-      <div class="video-background">
-        <video autoplay muted loop playsinline preload="metadata" poster="pics/wuwa.png">
-          <source src="video/hero-video.mp4" type="video/mp4">
-          Browser Anda tidak mendukung video.
-        </video>
-      </div>
-
-      <!-- Hero Content -->
-      <div class="hero-text">
-        <h1 class="hero-heading">Hi, I'm <span class="accent">Gayuh</span></h1>
-        <p class="hero-typed">
-          <span id="typed-strings">
-            <span>Graphic Designer.</span>
-            <span>Poster & Social Media Specialist.</span>
-            <span>Creating visuals.</span>
-            <span>Minimalist & Aesthetic Visuals.</span>
-          </span>
-          <span id="typed-output" aria-live="polite"></span>
-        </p>
-        <p class="hero-sub">Saya fokus membuat desain yang simple, elegan, dan efektif untuk promosi.</p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">Lihat Karya</a>
-          <a href="#contact" class="btn btn-ghost">Kontak</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section about" id="about" data-aos="fade-right">
-      <div class="container narrow">
-        <h2 class="section-title">About Me</h2>
-        <p>Saya seorang graphic designer yang fokus pada
-          digital artwork, photo manipulation, poster design, photo
-          editing, dan visual composition.</p>
-        <div class="skills">
-          <span>Photoshop</span>
-          <span>Canva</span>
-          <span>Poster Design</span>
-          <span>Sosial Media</span>
-          <span>Graphic Design</span>
-          <span>Typography</span>
-        </div>
-        <a href="CV/CV_Gayuh_Raiguna.pdf" class="btn btn-primary" download>Download CV</a>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section projects" id="projects" data-aos="zoom-in">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-sub">Beberapa karya desain yang pernah saya buat. Filter berdasarkan kategori di bawah.</p>
+        <div class="hero-content" data-aos="fade-up">
+          <!-- Orange Subtitle Tag -->
+          <div class="section-tag hero-tag">
+            <span class="tag-dot"></span>
+            <span>PORTFOLIO &amp; PERSONAL SHOWCASE / WEB DEVELOPER</span>
+          </div>
 
-        <div class="filter-group" role="group" aria-label="Filter projects">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="poster">Poster Design</button>
-          <button class="filter-btn" data-filter="sosmed">Social Media</button>
-          <button class="filter-btn" data-filter="branding">Graphic Design</button>
-          <button class="filter-btn" data-filter="thumbnail">Thumbnail YouTube</button>
+          <!-- Main Hero Heading -->
+          <h1 class="hero-heading">
+            Building Digital Experiences<br />
+            Through Code &amp; Creativity.
+          </h1>
+
+          <!-- Hero Subtext & Intro -->
+          <p class="hero-desc">
+            Halo! Saya <strong>Gayuh</strong> — seorang Web Developer &amp; Visual Designer yang berfokus pada
+            pengembangan antarmuka web modern, clean code, serta estetika visual yang fungsional dan berdampak nyata.
+          </p>
+
+          <!-- Hidden Typed Strings Container for script.js typing effect -->
+          <div class="typed-wrapper">
+            <span class="typed-prefix">Fokus Keahlian:</span>
+            <span id="typed-strings">
+              <span>Frontend &amp; Responsive Web Development.</span>
+              <span>Clean Code &amp; Logika Pemrograman.</span>
+              <span>UI/UX &amp; Poster Design Specialist.</span>
+              <span>Minimalist &amp; Modern Digital Experience.</span>
+            </span>
+            <span id="typed-output" aria-live="polite"></span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Lihat Portofolio</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+          </div>
         </div>
 
-        <div class="projects-grid" id="projects-grid">
-          <article class="card" data-category="poster">
-            <img src="pics/poster musik.jpg" alt="Poster promosi musik" loading="lazy" />
-          </article>
-          <article class="card" data-category="sosmed">
-            <img src="pics/Artboard 2.png" alt="Konten sosial media joki game" loading="lazy" />
-          </article>
-          <article class="card" data-category="branding">
-            <img src="pics/WutheringWavesChangli_p1.jpg" alt="Ilustrasi karakter Wuthering Waves - Changli"
-              loading="lazy" />
-          </article>
-          <article class="card" data-category="poster">
-            <img src="pics/FINAL.jpg" alt="Poster promosi otomotif" loading="lazy" />
-          </article>
-          <article class="card" data-category="thumbnail">
-            <img src="pics/Final002.jpg" alt="Thumbnail YouTube bertema otomotif" loading="lazy" />
-          </article>
-          <article class="card" data-category="thumbnail">
-            <img src="pics/Final003.jpg" alt="Thumbnail YouTube bertema otomotif" loading="lazy" />
-          </article>
-          <article class="card" data-category="sosmed">
-            <img src="pics/2.jpg" alt="Konten sosial media joki game" loading="lazy" />
-          </article>
-          <article class="card" data-category="branding">
-            <img src="pics/Ive.jpg" alt="Ilustrasi karakter Ive" loading="lazy" />
-          </article>
+        <!-- 3 Stat Cards in a Row -->
+        <div class="hero-stats-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-num">300+</span>
+              <span class="stat-icon-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </div>
+            <h3 class="stat-title">Jam Koding Mandiri</h3>
+            <p class="stat-desc">Eksplorasi logika, arsitektur kode, perancangan antarmuka responsif, dan problem
+              solving secara terarah.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-num">8+</span>
+              <span class="stat-icon-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </div>
+            <h3 class="stat-title">Proyek Mandiri &amp; Selesai</h3>
+            <p class="stat-desc">Beragam website, aplikasi fungsional, serta karya desain promosi nyata yang telah
+              diselesaikan dengan standar tinggi.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-num">100%</span>
+              <span class="stat-icon-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </div>
+            <h3 class="stat-title">Komitmen Belajar</h3>
+            <p class="stat-desc">Dedikasi penuh untuk terus berkembang, menguasai teknologi modern, dan menjaga
+              konsistensi kualitas karya.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section contact" id="contact" data-aos="fade-up">
-      <div class="container narrow">
-        <h2 class="section-title">Contact Me</h2>
-        <p>Butuh desain untuk promosi? Kirim pesan di bawah atau hubungi lewat sosial media.</p>
-
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="form-field">
-            <label for="name">Nama</label>
-            <input type="text" id="name" name="name" required placeholder="Nama Anda" />
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>TENTANG SAYA</span>
           </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="email@domain.com" />
-          </div>
-          <div class="form-field">
-            <label for="message">Pesan</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Kirim</button>
-          <p id="form-status" role="status" aria-live="polite"></p>
-        </form>
-
-        <div class="contact-direct">
-          <p>Email langsung: <a href="mailto:gayuhraiiguna@gmail.com">gayuhraiiguna@gmail.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/6281296674543" target="_blank" rel="noopener">+62 812-9667-4543</a></p>
+          <h2 class="section-title">Menemukan Semangat dalam Logika &amp; Pemecahan Masalah.</h2>
         </div>
 
-        <div class="social-links">
-          <a href="https://www.instagram.com/raiga.06" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.linkedin.com/in/gayuhraiguna" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.behance.net/gayuhraiguna" target="_blank" rel="noopener">Behance</a>
+        <!-- 2 Columns Layout -->
+        <div class="about-grid">
+          <!-- Left Column: Story & Philosophy -->
+          <div class="about-story" data-aos="fade-right">
+            <p class="about-p">
+              Bagi saya, koding dan desain adalah dua sisi mata uang yang saling melengkapi. Koding memberikan struktur
+              logika dan fungsionalitas yang kuat, sementara desain memastikan setiap interaksi pengguna terasa
+              intuitif, elegan, dan bermakna.
+            </p>
+            <p class="about-p">
+              Saya senang menyelami alur logika pemecahan masalah—mulai dari menstrukturkan kode yang modular,
+              mengoptimalkan tata letak responsif, hingga memastikan setiap baris kode mudah dirawat dan dikembangkan di
+              masa depan.
+            </p>
+            <p class="about-p">
+              Prinsip utama yang selalu saya terapkan adalah kesederhanaan yang efektif (clean, minimal, and
+              purposeful). Menghilangkan kerumitan yang tidak perlu agar fokus utama dari solusi dapat tercapai secara
+              optimal.
+            </p>
+
+            <!-- Skills Pills Row -->
+            <div class="about-tags-box">
+              <div class="skills">
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3 &amp; Tailwind</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">PHP &amp; MySQL</span>
+                <span class="skill-pill">Photoshop</span>
+                <span class="skill-pill">Canva</span>
+                <span class="skill-pill">Poster Design</span>
+                <span class="skill-pill">Typography</span>
+              </div>
+            </div>
+
+            <div class="about-cta">
+              <a href="CV/CV_Gayuh_Raiguna.pdf" class="btn btn-primary" download>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Unduh CV Lengkap</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: 3 Feature Cards -->
+          <div class="about-features" data-aos="fade-left">
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Struktur yang Kuat</h3>
+                <p class="feature-desc">Setiap arsitektur kode dan tata letak dirancang dengan struktur rapi, semantik,
+                  serta mudah diskalakan.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Clean &amp; Readable Code</h3>
+                <p class="feature-desc">Mengutamakan keterbacaan kode, konsistensi penamaan, dan modularitas agar mudah
+                  dipahami serta dirawat.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                  </path>
+                </svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Fokus pada Solusi &amp; Kebutuhan</h3>
+                <p class="feature-desc">Membangun fitur dan antarmuka yang menjawab kebutuhan riil pengguna dengan alur
+                  UX yang mulus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>PORTFOLIO PROYEK</span>
+          </div>
+          <h2 class="section-title">Proyek Nyata yang Dibangun Sendiri</h2>
+          <p class="section-sub">Beberapa karya desain &amp; proyek yang saya kembangkan untuk melatih logika,
+            arsitektur, dan implementasi nyata.</p>
+        </div>
+
+        <!-- Filter Buttons Bar -->
+        <div class="filter-wrapper" data-aos="fade-up">
+          <div class="filter-group" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+            <button class="filter-btn" data-filter="poster">Poster Design</button>
+            <button class="filter-btn" data-filter="sosmed">Social Media</button>
+            <button class="filter-btn" data-filter="branding">Graphic Design</button>
+            <button class="filter-btn" data-filter="thumbnail">Thumbnail YouTube</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project Card 1: Poster Musik -->
+          <article class="card project-card" data-category="poster" data-aos="fade-up">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://sistem-promosi-musik</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/poster musik.jpg" alt="Poster promosi musik" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Sistem Promosi &amp; Poster Musik Event</h3>
+              <p class="project-desc">Perancangan poster promosi event musik dengan tipografi dinamis, perpaduan warna
+                atraktif, dan hierarki informasi terstruktur.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#PosterDesign</span>
+                <span class="tag-badge">#Photoshop</span>
+                <span class="tag-badge">#Typography</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Poster Design</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Social Media Feed -->
+          <article class="card project-card" data-category="sosmed" data-aos="fade-up" data-aos-delay="100">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://katalog-sosmed-gaming</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/Artboard 2.png" alt="Konten sosial media joki game" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Katalog Konten &amp; Media Sosial Gaming</h3>
+              <p class="project-desc">Desain feed promosi media sosial untuk layanan gaming dengan palet neon, layout
+                modern, dan Call-To-Action (CTA) yang jelas.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#SocialMedia</span>
+                <span class="tag-badge">#CanvaPro</span>
+                <span class="tag-badge">#MarketingDesign</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Social Media</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Wuthering Waves Artwork -->
+          <article class="card project-card" data-category="branding" data-aos="fade-up">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://visual-artwork-changli</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/WutheringWavesChangli_p1.jpg" alt="Ilustrasi karakter Wuthering Waves - Changli"
+                  loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Aplikasi Catatan &amp; Visual Artwork Changli</h3>
+              <p class="project-desc">Eksplorasi komposisi grafis karakter game Changli dengan harmonisasi warna hangat,
+                framing sinematik, dan estetika tipografi.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#GraphicDesign</span>
+                <span class="tag-badge">#VisualArtwork</span>
+                <span class="tag-badge">#Photoshop</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Graphic Design</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 4: Poster Otomotif -->
+          <article class="card project-card" data-category="poster" data-aos="fade-up" data-aos-delay="100">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://landing-poster-automotive</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/FINAL.jpg" alt="Poster promosi otomotif" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Koleksi Desain &amp; Poster Otomotif Series</h3>
+              <p class="project-desc">Karya poster komersial otomotif dengan lighting effects dinamis, tekstur aspal
+                realistis, dan ketelitian detail bodi kendaraan.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#Automotive</span>
+                <span class="tag-badge">#PosterDesign</span>
+                <span class="tag-badge">#PhotoManipulation</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Poster Design</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 5: YouTube Thumbnail 01 -->
+          <article class="card project-card" data-category="thumbnail" data-aos="fade-up">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://yt-thumbnail-series-01</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/Final002.jpg" alt="Thumbnail YouTube bertema otomotif" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Thumbnail YouTube Otomotif Part 1</h3>
+              <p class="project-desc">Desain cover video dengan rasio kontras tinggi, ekspresi subjek menonjol, dan
+                tipografi punchy untuk memaksimalkan Click-Through Rate.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#ThumbnailYT</span>
+                <span class="tag-badge">#HighCTR</span>
+                <span class="tag-badge">#Photoshop</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Thumbnail YouTube</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 6: YouTube Thumbnail 02 -->
+          <article class="card project-card" data-category="thumbnail" data-aos="fade-up" data-aos-delay="100">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://yt-thumbnail-series-02</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/Final003.jpg" alt="Thumbnail YouTube bertema otomotif" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Thumbnail YouTube Otomotif Part 2</h3>
+              <p class="project-desc">Kelanjutan seri thumbnail video otomotif dengan penataan visual aksi berkendara
+                dan elemen penarik perhatian audiens.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#ThumbnailYT</span>
+                <span class="tag-badge">#ContentCreator</span>
+                <span class="tag-badge">#ColorGrading</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Thumbnail YouTube</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 7: Sosmed Joki Game 02 -->
+          <article class="card project-card" data-category="sosmed" data-aos="fade-up">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://feed-promo-joki-part2</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/2.jpg" alt="Konten sosial media joki game" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Banner Promosi Jasa Game Online</h3>
+              <p class="project-desc">Materi promosi komersial untuk layanan game dengan penyampaian daftar harga,
+                benefit, dan testimoni secara ringkas dan menarik.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#SocialMedia</span>
+                <span class="tag-badge">#PromoBanner</span>
+                <span class="tag-badge">#MarketingDesign</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Social Media</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 8: Karakter Ive -->
+          <article class="card project-card" data-category="branding" data-aos="fade-up" data-aos-delay="100">
+            <div class="mockup-frame">
+              <div class="mockup-bar">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-address">preview://character-artwork-ive</div>
+              </div>
+              <div class="card-media">
+                <img src="pics/Ive.jpg" alt="Ilustrasi karakter Ive" loading="lazy" />
+                <div class="media-overlay">
+                  <span class="overlay-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buka Pratinjau</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Ilustrasi &amp; Desain Karakter Ive</h3>
+              <p class="project-desc">Eksplorasi artwork karakter dengan sentuhan warna lembut, integrasi elemen
+                tipografi modern, dan mood visual yang tenang.</p>
+              <div class="project-tags">
+                <span class="tag-badge">#GraphicDesign</span>
+                <span class="tag-badge">#Illustration</span>
+                <span class="tag-badge">#Aesthetic</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-card-preview" type="button">
+                  <span>Lihat Detail</span>
+                  <svg class="footer-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <span class="category-indicator">Graphic Design</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Full-width Callout Card -->
+        <div class="callout-card" data-aos="fade-up">
+          <div class="callout-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+              <path
+                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14">
+              </path>
+            </svg>
+          </div>
+          <div class="callout-text">
+            Semua proyek di atas dibuat secara mandiri dari nol untuk melatih pemahaman arsitektur aplikasi, estetika
+            visual, dan struktur data yang bersih.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>TECH STACK &amp; TOOLS</span>
+          </div>
+          <h2 class="section-title">Alat &amp; Teknologi yang Benar-Benar Saya Gunakan</h2>
+          <p class="section-sub">Perangkat lunak dan teknologi yang menjadi andalan dalam menyelesaikan setiap baris
+            kode dan karya visual secara profesional.</p>
+        </div>
+
+        <!-- 6 Tool Cards Grid (3 columns x 2 rows) -->
+        <div class="tools-grid" data-aos="fade-up">
+          <!-- Tool 1: HTML5 -->
+          <div class="tool-card">
+            <div class="tool-top">
+              <h3 class="tool-name">HTML5</h3>
+              <span class="tool-badge-dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </div>
+            <p class="tool-desc">Pondasi semantik halaman web yang rapi, aksesibel, SEO-friendly, dan terstruktur sesuai
+              standar web modern.</p>
+            <div class="tool-meta">
+              <span class="meta-label">Status Penggunaan:</span>
+              <span class="meta-tag">Pondasi Utama</span>
+            </div>
+          </div>
+
+          <!-- Tool 2: CSS3 & Tailwind -->
+          <div class="tool-card">
+            <div class="tool-top">
+              <h3 class="tool-name">CSS3 &amp; Tailwind</h3>
+              <span class="tool-badge-dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </div>
+            <p class="tool-desc">Styling modern dengan CSS Grid, Flexbox, serta utility-first CSS framework untuk
+              tampilan responsif di segala perangkat.</p>
+            <div class="tool-meta">
+              <span class="meta-label">Status Penggunaan:</span>
+              <span class="meta-tag">Sering Digunakan</span>
+            </div>
+          </div>
+
+          <!-- Tool 3: JavaScript -->
+          <div class="tool-card">
+            <div class="tool-top">
+              <h3 class="tool-name">JavaScript (ES6+)</h3>
+              <span class="tool-badge-dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </div>
+            <p class="tool-desc">Manipulasi DOM interaktif, penanganan asynchronous (fetch API), state sederhana, dan
+              logika frontend yang lincah.</p>
+            <div class="tool-meta">
+              <span class="meta-label">Status Penggunaan:</span>
+              <span class="meta-tag">Bahasa Utama</span>
+            </div>
+          </div>
+
+          <!-- Tool 4: Adobe Photoshop -->
+          <div class="tool-card">
+            <div class="tool-top">
+              <h3 class="tool-name">Adobe Photoshop</h3>
+              <span class="tool-badge-dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </div>
+            <p class="tool-desc">Manipulasi foto kompleks, photo editing, digital artwork compositing, color grading,
+              dan pembuatan poster resolusi tinggi.</p>
+            <div class="tool-meta">
+              <span class="meta-label">Status Penggunaan:</span>
+              <span class="meta-tag">Alat Utama (Mahir)</span>
+            </div>
+          </div>
+
+          <!-- Tool 5: Canva Pro -->
+          <div class="tool-card">
+            <div class="tool-top">
+              <h3 class="tool-name">Canva Pro</h3>
+              <span class="tool-badge-dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </div>
+            <p class="tool-desc">Pembuatan aset grafis kilat, perancangan layout media sosial yang konsisten, pembuatan
+              template promosi, dan materi presentasi.</p>
+            <div class="tool-meta">
+              <span class="meta-label">Status Penggunaan:</span>
+              <span class="meta-tag">Sering Digunakan</span>
+            </div>
+          </div>
+
+          <!-- Tool 6: MySQL & Database -->
+          <div class="tool-card">
+            <div class="tool-top">
+              <h3 class="tool-name">MySQL / Database</h3>
+              <span class="tool-badge-dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </div>
+            <p class="tool-desc">Perancangan relasi database, query SQL dasar, struktur penyimpanan data teratur, serta
+              integritas data relasional.</p>
+            <div class="tool-meta">
+              <span class="meta-label">Status Penggunaan:</span>
+              <span class="meta-tag">Database Relasional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Callout Banner Below Tools -->
+        <div class="tools-cta-banner" data-aos="fade-up">
+          <div class="cta-banner-left">
+            <span class="cta-banner-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </span>
+            <div class="cta-banner-text">
+              <strong>Terbuka untuk Kolaborasi &amp; Pengembangan Proyek</strong>
+              <span>Ingin berdiskusi seputar proyek web, kebutuhan materi visual, atau peluang kerja sama?</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-sm">
+            <span>Ajak Diskusi Sekarang</span>
+            <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline / Journey Section -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>PERJALANAN BELAJAR</span>
+          </div>
+          <h2 class="section-title">Langkah Demi Langkah Membangun Keahlian</h2>
+          <p class="section-sub">Catatan proses belajar terarah dari fundamental hingga membangun aplikasi dan karya
+            nyata secara konsisten.</p>
+        </div>
+
+        <!-- Vertical Timeline Tree -->
+        <div class="timeline-container" data-aos="fade-up">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-badge">TAHAP 01 — FONDASI</span>
+              <h3 class="timeline-title">Memulai dengan Fundamental Web &amp; Desain</h3>
+              <p class="timeline-desc">Mempelajari HTML5 semantik, CSS3 styling responsif, dasar-dasar algoritma
+                pemrograman dengan JavaScript murni, serta prinsip komposisi visual.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-badge">TAHAP 02 — LOGIKA</span>
+              <h3 class="timeline-title">Mengeksplorasi Logika Kode &amp; Manipulasi Foto</h3>
+              <p class="timeline-desc">Mendalami manipulasi DOM interaktif, penanganan event JavaScript, teknik masking
+                Photoshop canggih, serta integrasi data lokal.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-badge">TAHAP 03 — SPESIALISASI</span>
+              <h3 class="timeline-title">Spesialisasi Poster, Media Sosial &amp; Antarmuka</h3>
+              <p class="timeline-desc">Menerapkan keterampilan pada berbagai karya poster promosi komersial, serial
+                thumbnail YouTube otomotif, serta antarmuka web yang bersih.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-badge">TAHAP 04 — INTEGRASI</span>
+              <h3 class="timeline-title">Penerapan Best Practices &amp; Pembuatan Proyek Nyata</h3>
+              <p class="timeline-desc">Membangun portofolio proyek lengkap dari nol, optimalisasi performa antarmuka
+                pengguna, dan penerapan clean code secara konsisten.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>HUBUNGI SAYA</span>
+          </div>
+          <h2 class="section-title">Tertarik Berkolaborasi atau Diskusi Proyek?</h2>
+          <p class="section-sub">Pintu selalu terbuka untuk diskusi proyek, freelance, kerja sama tim, atau sekadar
+            bertukar wawasan pemrograman &amp; desain.</p>
+        </div>
+
+        <!-- 2 Columns Contact Layout -->
+        <div class="contact-grid">
+          <!-- Left Column: Direct Info & Socials -->
+          <div class="contact-sidebar" data-aos="fade-right">
+            <!-- Email Box -->
+            <div class="contact-info-card email-highlight-card">
+              <div class="card-top-row">
+                <span class="info-card-label">Email Langsung</span>
+                <span class="orange-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <a href="mailto:gayuhraiiguna@gmail.com" class="info-email-link"
+                id="email-address-text">gayuhraiiguna@gmail.com</a>
+              <button class="btn btn-outline btn-sm copy-email-btn" id="copy-email-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Salin Alamat Email</span>
+              </button>
+            </div>
+
+            <!-- Direct Contact List -->
+            <div class="contact-direct-group">
+              <a href="https://wa.me/6281296674543" target="_blank" rel="noopener" class="direct-item">
+                <div class="direct-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="direct-meta">
+                  <span class="direct-name">WhatsApp</span>
+                  <span class="direct-val">+62 812-9667-4543</span>
+                </div>
+                <svg class="direct-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <a href="https://www.linkedin.com/in/gayuhraiguna" target="_blank" rel="noopener" class="direct-item">
+                <div class="direct-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="direct-meta">
+                  <span class="direct-name">LinkedIn</span>
+                  <span class="direct-val">Gayuh Raiguna</span>
+                </div>
+                <svg class="direct-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <a href="https://www.instagram.com/raiga.06" target="_blank" rel="noopener" class="direct-item">
+                <div class="direct-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="direct-meta">
+                  <span class="direct-name">Instagram</span>
+                  <span class="direct-val">@raiga.06</span>
+                </div>
+                <svg class="direct-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <a href="https://www.behance.net/gayuhraiguna" target="_blank" rel="noopener" class="direct-item">
+                <div class="direct-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h7a3 3 0 0 1 3 3 3 3 0 0 1-3 3H4V6z"></path>
+                    <path d="M4 12h8a3 3 0 0 1 3 3 3 3 0 0 1-3 3H4v-6z"></path>
+                    <path d="M17 10h4"></path>
+                    <path d="M17 14c0 2 2 3 4 3 1.5 0 2.5-.5 3-1"></path>
+                  </svg>
+                </div>
+                <div class="direct-meta">
+                  <span class="direct-name">Behance</span>
+                  <span class="direct-val">gayuhraiguna</span>
+                </div>
+                <svg class="direct-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form -->
+          <div class="contact-form-wrapper" data-aos="fade-left">
+            <div class="form-container-card">
+              <div class="form-card-header">
+                <h3 class="form-card-title">Kirim Pesan Langsung</h3>
+                <p class="form-card-desc">Isi formulir di bawah ini. Pesan Anda akan langsung terkirim ke kotak masuk
+                  saya via EmailJS.</p>
+              </div>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-field">
+                  <label for="name">Nama Lengkap</label>
+                  <input type="text" id="name" name="name" required placeholder="Nama Anda atau Perusahaan"
+                    autocomplete="name" />
+                </div>
+
+                <div class="form-field">
+                  <label for="email">Alamat Email</label>
+                  <input type="email" id="email" name="email" required placeholder="email@domain.com"
+                    autocomplete="email" />
+                </div>
+
+                <div class="form-field">
+                  <label for="message">Pesan Anda</label>
+                  <textarea id="message" name="message" rows="5" required
+                    placeholder="Tulis pesan atau ceritakan kebutuhan proyek Anda..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <span>Kirim Pesan Sekarang</span>
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+
+                <p id="form-status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Site Footer -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>&copy; 2025 Gayuh. All Rights Reserved.</p>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-mark">G</span>
+          <span class="logo-text">Gayuh<span class="dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Building Digital Experiences Through Code &amp; Creativity.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#journey">Journey</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2025 Gayuh. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Lightbox Modal for Fullscreen Image Preview -->
+  <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-label="Pratinjau Gambar Fullscreen">
+    <button class="modal-close" id="modal-close" aria-label="Tutup pratinjau">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="Pratinjau gambar penuh" />
+      <p id="modal-caption" class="modal-caption"></p>
+    </div>
+  </div>
 
   <!-- Cursor Trail Canvas -->
   <canvas id="cursor-line" aria-hidden="true"></canvas>
@@ -211,7 +1179,7 @@
   <!-- Main Script -->
   <script src="script.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 800, once: true, offset: 50 });
   </script>
 </body>
 
